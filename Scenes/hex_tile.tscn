@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgx1idx5skdck"]
+
+[ext_resource type="Texture2D" uid="uid://c0dejb0vqlhry" path="res://Assets/Images/hexagon.svg" id="1_8qbiw"]
+[ext_resource type="Script" path="res://Scenes/hex_tile.gd" id="2_8b6jt"]
+
+[node name="HexTile" type="Sprite2D"]
+texture = ExtResource("1_8qbiw")
+script = ExtResource("2_8b6jt")

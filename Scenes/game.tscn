@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1fq5wddjpbwc"]
+
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_qm24d"]
+[ext_resource type="Script" path="res://Scenes/hex_map.gd" id="3_sfelm"]
+[ext_resource type="PackedScene" uid="uid://bxqvwhox55hm5" path="res://Scenes/UserInterface/BottomUI.tscn" id="3_us324"]
+[ext_resource type="PackedScene" uid="uid://bj5q84cd1t51e" path="res://Scenes/UserInterface/TopUI.tscn" id="4_sgy2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huj6j"]
+size = Vector2(1920, 1080)
+
+[node name="Game" type="Node"]
+script = ExtResource("1_qm24d")
+
+[node name="HexMap" type="Area2D" parent="."]
+position = Vector2(960, 540)
+script = ExtResource("3_sfelm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HexMap"]
+position = Vector2(0.237854, 0)
+shape = SubResource("RectangleShape2D_huj6j")
+
+[node name="Highlight" type="Polygon2D" parent="HexMap"]
+polygon = PackedVector2Array(-12.5, 21.6506, 12.5, 21.6506, 25, 0, 12.5, -21.6506, -12.5, -21.6506, -25, 0)
+
+[node name="Label" type="Label" parent="HexMap/Highlight"]
+offset_left = 5.0
+offset_top = -39.0
+offset_right = 52.0
+offset_bottom = -25.0
+text = "SCREEN"
+metadata/_edit_use_anchors_ = true
+
+[node name="AreaCoords" type="Label" parent="HexMap/Highlight"]
+offset_left = 70.0
+offset_top = -39.0
+offset_right = 130.0
+offset_bottom = -13.0
+text = "SCREEN"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="HexMap/Highlight"]
+offset_left = 25.0
+offset_top = -19.0
+offset_right = 56.0
+offset_bottom = -5.0
+text = "HEX"
+metadata/_edit_use_anchors_ = true
+
+[node name="HexCoords" type="Label" parent="HexMap/Highlight"]
+offset_left = 68.0
+offset_top = -19.0
+offset_right = 118.0
+offset_bottom = 7.0
+text = "HEX"
+metadata/_edit_use_anchors_ = true
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+
+[node name="BottomUI" parent="UserInterface" instance=ExtResource("3_us324")]
+
+[node name="TopUI" parent="UserInterface" instance=ExtResource("4_sgy2v")]
