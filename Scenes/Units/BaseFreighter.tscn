@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci0qdri7pokma"]
+
+[ext_resource type="Script" path="res://Scenes/Units/BaseFreighter.gd" id="1_rq155"]
+[ext_resource type="Texture2D" uid="uid://b3pm6x613t8ee" path="res://Assets/Images/XK1_Hauler.png" id="1_xi6nb"]
+
+[node name="BaseFreighter" type="Node2D"]
+script = ExtResource("1_rq155")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xi6nb")
