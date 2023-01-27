@@ -27,3 +27,13 @@ text = "Turn:"
 [node name="TurnCounter" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 text = "0"
+
+[node name="PositionInfo" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MousePosEvent" type="Label" parent="PositionInfo"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "242,242"
