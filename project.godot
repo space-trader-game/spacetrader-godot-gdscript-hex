@@ -23,3 +23,7 @@ window/size/viewport_height=1080
 [editor]
 
 export/convert_text_resources_to_binary=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/carmel4a97.RTS_Camera2D/plugin.cfg")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1fq5wddjpbwc"]
+[gd_scene load_steps=7 format=3 uid="uid://c1fq5wddjpbwc"]
 
 [ext_resource type="Script" path="res://Scenes/game.gd" id="1_qm24d"]
 [ext_resource type="Script" path="res://Scenes/hex_map.gd" id="3_sfelm"]
 [ext_resource type="PackedScene" uid="uid://bxqvwhox55hm5" path="res://Scenes/UserInterface/BottomUI.tscn" id="3_us324"]
 [ext_resource type="PackedScene" uid="uid://bj5q84cd1t51e" path="res://Scenes/UserInterface/TopUI.tscn" id="4_sgy2v"]
+[ext_resource type="Script" path="res://addons/carmel4a97.RTS_Camera2D/RTS-Camera2D.gd" id="5_4t2wk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huj6j"]
 size = Vector2(1920, 1080)
@@ -65,3 +66,8 @@ position = Vector2(960, 540)
 [node name="BottomUI" parent="UserInterface" instance=ExtResource("3_us324")]
 
 [node name="TopUI" parent="UserInterface" instance=ExtResource("4_sgy2v")]
+
+[node name="RTS-Camera2D" type="Camera2D" parent="."]
+offset = Vector2(960, 540)
+current = true
+script = ExtResource("5_4t2wk")
