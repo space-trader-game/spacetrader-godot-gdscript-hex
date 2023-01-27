@@ -23,6 +23,8 @@ func _ready():
 	HexGrid.hex_scale = Vector2(hex_scale_size, hex_scale_size)
 	hex_ratio = hex_scale_size / HexWidth
 	print("Game.gd: hex ratio: ", hex_ratio)
+	
+	$HexMap.camera = $"RTS-Camera2D"
 
 	# connect UI signals
 	end_turn_button.button_up.connect(_on_end_turn)
