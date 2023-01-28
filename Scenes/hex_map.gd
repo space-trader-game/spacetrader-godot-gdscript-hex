@@ -1,6 +1,8 @@
 # Script to attach to a node which represents a hex grid
 extends Node2D
 
+
+var camera = null
 var HexGrid = preload("./hex_grid.gd").new()
 
 @onready var highlight = get_node("Highlight")
@@ -14,7 +16,7 @@ func _ready():
 
 func _unhandled_input(event):
 	if 'position' in event:
-		var relative_pos = global_transform.affine_inverse() * event.position
+		var relative_pos = (global_transform.affine_inverse() * event.position) + camera.position
 
 		# Display the coords used
 		if area_coords != null:
